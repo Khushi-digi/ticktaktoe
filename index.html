@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tic Tac Toe</title>
+    <!-- <link rel="stylesheet" href="app.css"> -->
+	<style>
+        body{
+            background-color: black;
+            color: rgb(4, 230, 166);
+		   display: flex;
+		   justify-content: center;
+		   flex-direction: column;
+		   align-items:center;
+		   transition: all 0.4s;
+        }
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 300px;
+			margin: auto;
+		}
+		
+		.square {
+			width: 100px;
+			height: 100px;
+			background-color: #4f5553dd;
+			border: 1px solid #48f7ce;
+			font-size: 50px;
+            color: rgb(56, 241, 180);
+			text-align: center;
+			line-height: 100px;
+			cursor: pointer;
+            box-sizing: border-box;
+		}
+		
+		.square:hover {
+			background-color: #47fccf77;
+        
+		}
+        h1{
+            text-align: center;
+            font-family: 'poppins';
+            font-size: 50px;
+        }
+		.winner .win{
+			font-size: 35px;
+			font-family: 'poppins';
+			text-align: center;
+			color: rgb(7, 227, 3);
+			transition: all 0.3s ease-out;
+			display: none;
+		}
+		.winner .los{
+			display: none;
+			font-size: 35px;
+			transition: all 0.3s ease-out;
+			font-family: 'poppins';
+			text-align: center;
+			color:  rgb(227, 5, 35);
+		}
+		.winner .win span{
+			color: rgb(79, 227, 5);
+			font-weight: 900;
+			font-size: 40px;
+
+		}
+		.winner .los span{
+			color: rgb(227, 5, 35);
+			font-weight: 900;
+			font-size: 40px;
+		}
+		.nowin{
+			display: none;
+			font-size: 35px;
+			transition: all 0.3s ease-out;
+			font-family: 'poppins';
+			text-align: center;
+			color:  rgb(249, 249, 41);
+		}
+	</style>
+</head>
+<body>
+	<h1>Tic Tac Toe</h1>
+	<div class="container">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+	<div class="winner">
+		<p id="xwin" class="win"><span>X </span> is the Winner.🎉</p>
+		<p id="owin" class="win"><span>O </span> is the Winner.🎉</p>
+		<p id="xlos" class="los"><span>X </span> is the Loser.👎</p>
+		<p id="olos" class="los"><span>O </span> is the Loser.👎</p>
+		<p id="nowin" class="nowin">NO WINNER !!🙅‍♂️</p>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
